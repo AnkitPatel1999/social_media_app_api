@@ -1,0 +1,27 @@
+{
+  "name": "social_media_app_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitPatel1999/social_media_app_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkitPatel1999/social_media_app_api/issues"
+  },
+  "homepage": "https://github.com/AnkitPatel1999/social_media_app_api#readme",
+  "dependencies": {
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
