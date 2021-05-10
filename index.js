@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
+const userRoutes = require('./routes/auth')
+
 dotenv.config();
 
 //middleware
@@ -12,9 +14,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.get('/',(req, res) => {
-    res.send("hello world")
-})
+app.use("/api/user/", userRoutes)
 
 mongoose.connect(
     process.env.DB_URL,
@@ -24,7 +24,7 @@ mongoose.connect(
     },
     (err) => {
     if(err) {
-        console.log(err);
+        console.log(err.message);
     } else {
         console.log("DB Connected");
     }
