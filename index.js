@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 const userRoutes = require('./routes/auth')
+const usersRoutes = require('./routes/users')
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(helmet());
 app.use(morgan("common"));
 
 app.use("/api/user/", userRoutes)
+app.use("/api/user/", usersRoutes)
 
 mongoose.connect(
     process.env.DB_URL,
