@@ -7,6 +7,7 @@ const morgan = require('morgan');
 
 const userRoutes = require('./routes/auth')
 const usersRoutes = require('./routes/users')
+const postsRoutes = require('./routes/posts')
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(morgan("common"));
 
 app.use("/api/user/", userRoutes)
 app.use("/api/user/", usersRoutes)
+app.use("/api/posts/", postsRoutes)
 
 mongoose.connect(
     process.env.DB_URL,
